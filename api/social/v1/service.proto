@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "messages.proto";
+
+package SocialService.api.social;
+
+option go_package = "pkg/api/social;social";
+
+// Сервис отношений
+service SocialService {
+
+  // Удаление пользователя из друзей
+  rpc RemoveFriend(RemoveFriendRequest) returns (RemoveFriendResponse) {}
+
+  // Получение списка друзей
+  rpc ListFriends(ListFriendsRequest) returns (ListFriendsResponse) {}
+}
