@@ -6,6 +6,7 @@ package SocialService.api.social;
 
 option go_package = "pkg/api/social;social";
 
+// Сервис отношений
 service SocialService {
 
   // Удаление пользователя из друзей
