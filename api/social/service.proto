@@ -10,8 +10,8 @@ service SocialService {
 
   // отправляет запрос на добавление в друзья другому пользователю
   // возвращает созданный запрос
-  rpc SendFriendRequest(SendFriendRequest) returns (FriendRequestResponse) {}
+  rpc SendFriendRequest(SendFriendRequestRequest) returns (SendFriendRequestResponse) {}
 
   // получает список запросов в друзья, пользователя
-  rpc ListFriendRequestsRequest(ListRequest) returns (ListFriendRequestsResponse) {}
+  rpc ListRequests(ListRequestsRequest) returns (ListRequestsResponse) {}
 }

@@ -5,24 +5,28 @@ package SocialService.api.social;
 option go_package = "proto/pkg/api/social;social";
 
 // запрос на отправку в друзья
-message SendFriendRequest {
+message SendFriendRequestRequest {
   string user_id = 1;
 }
 
 // просмотр одной заявки в друзья
-message FriendRequestResponse {
+message SendFriendRequestResponse {
+  FriendRequest friend_request = 1;
+}
+
+message FriendRequest {
   string request_id = 1;
   FriendRequestStatus status = 2;
 }
 
 // запрос на получение списка заявок в друзья
-message ListRequest {
+message ListRequestsRequest {
   string user_id = 1;
 }
 
 // ответ, содержащий список заявок в друзья
-message ListFriendRequestsResponse {
-  repeated FriendRequestResponse requests = 1;
+message ListRequestsResponse {
+  repeated FriendRequest requests = 1;
 }
 
 
