@@ -29,14 +29,28 @@ message ListFriendRequestsResponse {
 // добавляем все свои энамы если они вам нужны по задаче
 enum FriendRequestStatus {
   PENDING = 0;
+  ACCEPTED = 1;
+  DECLINED = 2;
 }
 
 // запрос на принятие входящей заявки в друзья.
-message AcceptFriendRequest {
+message AcceptFriendRequestRequest {
   string request_id = 1;
+}
+
+// Ответ на принятие входящей заявки в друзья.
+message AcceptFriendRequestResponse {
+  string request_id = 1;
+  FriendRequestStatus status = 2;
 }
 
 // запрос на отклонение входящей заявки в друзья.
 message DeclineFriendRequestRequest {
   string request_id = 1;
+}
+
+// Ответ на отклонение входящей заявки в друзья.
+message DeclineFriendRequestResponse {
+  string request_id = 1;
+  FriendRequestStatus status = 2;
 }
