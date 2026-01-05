@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "messages.proto";
+
+package SocialService.api.social;
+
+option go_package = "pkg/api/social;social";
+
+service SocialService {
+
+  // отправляет запрос на добавление в друзья другому пользователю
+  // возвращает созданный запрос
+  rpc SendFriend(SendFriendRequest) returns (FriendRequest) {}
+
+  // получает список запросов в друзья, пользователя
+  rpc ListFriend (ListRequest) returns (ListFriendRequestsResponse) {}
+}
