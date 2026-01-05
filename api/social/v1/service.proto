@@ -1,10 +1,9 @@
 syntax = "proto3";
-
 import "messages.proto";
 
 package SocialService.api.social;
 
-option go_package = "pkg/api/social;social";
+option go_package = "proto/pkg/api/social;social";
 
 // Сервис отношений
 service SocialService {
@@ -14,4 +13,17 @@ service SocialService {
 
   // Получение списка друзей
   rpc ListFriends(ListFriendsRequest) returns (ListFriendsResponse) {}
+
+  // отправляет запрос на добавление в друзья другому пользователю
+  // возвращает созданный запрос
+  rpc SendFriend(SendFriendRequest) returns (FriendRequest) {}
+
+  // получает список запросов в друзья, пользователя
+  rpc ListFriend (ListRequest) returns (ListFriendRequestsResponse) {}
+
+  // принимает входящую заявку в друзья.
+  rpc AcceptFriendRequest(AcceptFriendRequestRequest) returns (AcceptFriendRequestResponse){}
+
+  // отклоняет входящую заявку в друзья.
+  rpc DeclineFriendRequest(DeclineFriendRequestRequest) returns (DeclineFriendRequestResponse){}
 }
