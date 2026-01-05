@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package SocialService.api.social;
+
+option go_package = "pkg/api/social;social";
+
+// Запрос на удаление пользователя из друзей
+message RemoveFriendRequest {
+  string user_id = 1;
+}
+
+message RemoveFriendResponse {}
+
+// Запрос на список друзей
+message ListFriendsRequest {
+  string user_id = 1;
+  int32 limit = 2;
+  optional string cursor = 3;
+}
+
+// Ответ на список друзей
+message ListFriendsResponse {
+  repeated string friend_user_ids = 1;
+  optional string next_cursor = 2;
+}
+
