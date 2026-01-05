@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package SocialService.api.social;
+
+option go_package = "proto/pkg/api/social;social";
+
+// запрос на отправку в друзья
+message SendFriendRequest {
+  string user_id = 1;
+}
+
+// просмотр одной заявки в друзья
+message FriendRequest {
+  string request_id = 1;
+  FriendRequestStatus status = 2;
+}
+
+// запрос на получение списка заявок в друзья
+message ListRequest {
+  string user_id = 1;
+}
+
+// ответ, содержащий список заявок в друзья
+message ListFriendRequestsResponse {
+  repeated FriendRequest requests = 1;
+}
+
+
+// добавляем все свои энамы если они вам нужны по задаче
+enum FriendRequestStatus {
+  PENDING = 0;
+}
