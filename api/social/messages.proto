@@ -30,3 +30,13 @@ message ListFriendRequestsResponse {
 enum FriendRequestStatus {
   PENDING = 0;
 }
+
+// запрос на принятие входящей заявки в друзья.
+message AcceptFriendRequest {
+  string request_id = 1;
+}
+
+// запрос на отклонение входящей заявки в друзья.
+message DeclineFriendRequestRequest {
+  string request_id = 1;
+}

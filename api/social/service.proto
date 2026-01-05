@@ -14,4 +14,10 @@ service SocialService {
 
   // получает список запросов в друзья, пользователя
   rpc ListFriend (ListRequest) returns (ListFriendRequestsResponse) {}
+
+  // принимает входящую заявку в друзья.
+  rpc AcceptFriend(AcceptFriendRequest) returns (FriendRequest){}
+
+  // отклоняет входящую заявку в друзья.
+  rpc DeclineFriend(DeclineFriendRequest) returns (FriendRequest){}
 }
