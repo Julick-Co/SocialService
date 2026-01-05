@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package SocialService.api.social;
 
-option go_package = "pkg/api/social;social";
+option go_package = "proto/pkg/api/social;social";
 
 // запрос на отправку в друзья
 message SendFriendRequest {
