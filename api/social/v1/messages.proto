@@ -36,15 +36,15 @@ message FriendRequest {
 }
 
 // запрос на получение списка заявок в друзья
-message ListRequest {
+message ListRequestsRequest {
   string user_id = 1;
 }
 
+
 // ответ, содержащий список заявок в друзья
-message ListFriendRequestsResponse {
+message ListRequestsResponse {
   repeated FriendRequest requests = 1;
 }
-
 
 // добавляем все свои энамы если они вам нужны по задаче
 enum FriendRequestStatus {
@@ -73,5 +73,15 @@ message DeclineFriendRequestRequest {
 message DeclineFriendRequestResponse {
   string request_id = 1;
   FriendRequestStatus status = 2;
+}
+
+// запрос на отправку в друзья
+message SendFriendRequestRequest {
+  string user_id = 1;
+}
+
+// Ответ на отправки запроса в друзья
+message SendFriendRequestResponse {
+  FriendRequest friend_request = 1;
 }
 
