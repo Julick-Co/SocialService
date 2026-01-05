@@ -10,7 +10,7 @@ message SendFriendRequest {
 }
 
 // просмотр одной заявки в друзья
-message FriendRequest {
+message FriendRequestResponse {
   string request_id = 1;
   FriendRequestStatus status = 2;
 }
@@ -22,7 +22,7 @@ message ListRequest {
 
 // ответ, содержащий список заявок в друзья
 message ListFriendRequestsResponse {
-  repeated FriendRequest requests = 1;
+  repeated FriendRequestResponse requests = 1;
 }
 
 
