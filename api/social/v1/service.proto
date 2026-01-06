@@ -1,5 +1,6 @@
 syntax = "proto3";
-import "messages.proto";
+
+import "api/social/v1/messages.proto";
 
 package SocialService.api.social;
 
