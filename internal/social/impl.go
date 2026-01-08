@@ -30,3 +30,25 @@ func (s *SocialServiceImpl) ListRequests(context.Context, *pb.ListRequestsReques
 		Requests: []*pb.FriendRequest{},
 	}, nil
 }
+
+func (s *SocialServiceImpl) AcceptFriendRequest(context.Context, *pb.AcceptFriendRequestRequest,
+) (*pb.AcceptFriendRequestResponse, error) {
+
+	log.Println("Достучался до метода AcceptFriendRequest")
+
+	return &pb.AcceptFriendRequestResponse{
+		RequestId: "generated Id",
+		Status:    pb.FriendRequestStatus_ACCEPTED,
+	}, nil
+}
+
+func (s *SocialServiceImpl) DeclineFriendRequest(context.Context, *pb.DeclineFriendRequestRequest,
+) (*pb.DeclineFriendRequestResponse, error) {
+
+	log.Println("Достучался до метода DeclineFriendRequest")
+
+	return &pb.DeclineFriendRequestResponse{
+		RequestId: "generated Id",
+		Status:    pb.FriendRequestStatus_DECLINED,
+	}, nil
+}
