@@ -52,3 +52,21 @@ func (s *SocialServiceImpl) DeclineFriendRequest(context.Context, *pb.DeclineFri
 		Status:    pb.FriendRequestStatus_DECLINED,
 	}, nil
 }
+
+func (s *SocialServiceImpl) RemoveFriend(context.Context, *pb.RemoveFriendRequest,
+) (*pb.RemoveFriendResponse, error) {
+
+	log.Println("Достучался до метода RemoveFriend")
+
+	return &pb.RemoveFriendResponse{}, nil
+}
+
+func (s *SocialServiceImpl) ListFriends(context.Context, *pb.ListFriendsRequest,
+) (*pb.ListFriendsResponse, error) {
+
+	log.Println("Достучался до метода ListFriends")
+
+	return &pb.ListFriendsResponse{
+		FriendUserIds: []string{},
+	}, nil
+}
