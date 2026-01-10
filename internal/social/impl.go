@@ -1,7 +1,7 @@
 package social
 
 import (
-	pb "SocialService/proto/pkg/api/social"
+	pb "SocialService/proto/pkg/api/v1/social"
 	"context"
 	_ "fmt"
 	"log"
@@ -29,4 +29,5 @@ func (s *SocialServiceImpl) ListRequests(context.Context, *pb.ListRequestsReques
 	return &pb.ListRequestsResponse{
 		Requests: []*pb.FriendRequest{},
 	}, nil
+
 }

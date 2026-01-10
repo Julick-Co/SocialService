@@ -4,7 +4,7 @@ import "messages.proto";
 
 package SocialService.api.social;
 
-option go_package = "proto/pkg/api/social;social";
+option go_package = "proto/pkg/api/v1/social;social";
 
 // Сервис отношений
 service SocialService {
