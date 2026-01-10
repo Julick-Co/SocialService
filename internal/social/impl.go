@@ -1,7 +1,7 @@
 package social
 
 import (
-	pb "SocialService/proto/pkg/api/v1/social"
+	pb "SocialService/proto/api/v1/social"
 	"context"
 	_ "fmt"
 	"log"

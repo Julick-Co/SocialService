@@ -2,7 +2,7 @@ package main
 
 import (
 	"SocialService/internal/social"
-	pb "SocialService/proto/pkg/api/v1/social"
+	pb "SocialService/proto/api/v1/social"
 	"log"
 	"net"
 

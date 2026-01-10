@@ -13,4 +13,4 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 ```bash
 # Генерация кода из proto-файлов
-protoc --proto_path=./api/v1/social --go_out=. --go-grpc_out=. api/v1/social/messages.proto api/v1/social/service.proto
+protoc --proto_path=./api/v1/social --go_out=. --go-grpc_out=. api/v1/social/social_messages.proto api/v1/social/social_service.proto
